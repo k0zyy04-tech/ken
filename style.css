@@ -1,0 +1,286 @@
+/* ===== style-dark.css ===== */
+
+/* --- General Layout --- */
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* --- Headings --- */
+  h1, h2, h3 {
+    color: #f1f5f9;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+  }
+  
+  /* --- Top Action Links (Add Student / Add Grade) --- */
+  .top-actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .top-actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    background: #1e293b;
+    color: #60a5fa;
+    border: 1px solid #334155;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+  }
+  
+  .top-actions a:hover {
+    background: #2563eb;
+    color: #f9fafb;
+    border-color: #2563eb;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+  }
+  
+  .top-actions a::before {
+    content: "＋";
+    font-weight: 700;
+    font-size: 16px;
+    color: #93c5fd;
+  }
+  
+  /* --- Buttons (General) --- */
+  button,
+  input[type="submit"],
+  input[type="button"] {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.25s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  }
+  
+  button:hover,
+  input[type="submit"]:hover,
+  input[type="button"]:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  }
+  
+  button:active,
+  input[type="submit"]:active,
+  input[type="button"]:active {
+    transform: translateY(0);
+  }
+  
+  /* --- CRUD-Specific Buttons --- */
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  }
+  
+  /* Add / Create Button */
+  .btn-add {
+    background-color: #10b981;
+    color: #ecfdf5;
+  }
+  .btn-add:hover {
+    background-color: #059669;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+  }
+  
+  /* Edit Button */
+  .btn-edit {
+    background-color: #3b82f6;
+    color: #eff6ff;
+  }
+  .btn-edit:hover {
+    background-color: #2563eb;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* Delete Button */
+  .btn-delete {
+    background-color: #ef4444;
+    color: #fef2f2;
+  }
+  .btn-delete:hover {
+    background-color: #dc2626;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);
+  }
+  
+  /* View / Read Button */
+  .btn-view {
+    background-color: #8b5cf6;
+    color: #f5f3ff;
+  }
+  .btn-view:hover {
+    background-color: #7c3aed;
+    box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+  }
+  
+  /* --- Table --- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #e2e8f0;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #334155;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #1e293b;
+    color: #93c5fd;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  
+  tr:hover {
+    background-color: #273449;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  /* --- Table Action Links (Edit / Delete) --- */
+  .action-buttons a {
+    display: inline-block;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .action-buttons a.btn-edit {
+    color: #3b82f6;
+    border: 1px solid #3b82f6;
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+  
+  .action-buttons a.btn-edit:hover {
+    background-color: #3b82f6;
+    color: #f1f5f9;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+  
+  .action-buttons a.btn-delete {
+    color: #ef4444;
+    border: 1px solid #ef4444;
+    background-color: rgba(239, 68, 68, 0.1);
+  }
+  
+  .action-buttons a.btn-delete:hover {
+    background-color: #ef4444;
+    color: #fef2f2;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+  }
+  
+  /* --- Success & Error Messages --- */
+  .alert {
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .alert-success {
+    background-color: #064e3b;
+    color: #a7f3d0;
+    border: 1px solid #10b981;
+  }
+  
+  .alert-error {
+    background-color: #7f1d1d;
+    color: #fecaca;
+    border: 1px solid #f87171;
+  }
+  
+  /* --- Links --- */
+  a {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.25s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  }
+  a.delete{
+    background-color: #9c1e1e;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.25s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  }
+  
+  a:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+  }
+  a.grade{
+    background-color: #1e9c2f;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.25s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  }
+  
+  /* --- Responsive --- */
+  @media (max-width: 600px) {
+    .container {
+      padding: 24px;
+    }
+  
+    table {
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 10px;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+    }
+  }
+  
